@@ -22,7 +22,7 @@ def get_filters():
         city = input("\nWhich city would you like to learn about? Chicago, New York City or Washington? Type the name below\n")
         city = city.lower()
         if city not in ('chicago','new york city','washington'):
-            print("Sorry, please type in from the choices in the question below")
+            print("Sorry try again, please type in from the choices in the question below")
             continue
         else:
             break
