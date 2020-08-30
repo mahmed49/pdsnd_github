@@ -4,6 +4,9 @@
 ### Project Title
 Exploring US Bikeshare Data
 
+### Project goal
+To create an interactive environment where a user chooses and filters the data for analysis
+
 ### Description
 This program will allow its user to analyze bikeshare data of 3 major cities
 
