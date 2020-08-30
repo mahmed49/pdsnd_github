@@ -30,7 +30,7 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
 
     while True:
-        month = input("\nWhich month would you like to see the data from? Please type in from the following choices: January, February, March, April, May, June or All\n")
+        month = input("\nWhich month would you like to see the data from? The data is available only for the following periods: January, February, March, April, May, June or All\n")
         month = month.lower()
         if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
             print("Sorry, please type in from the choices in the question below")
@@ -129,7 +129,7 @@ def station_stats(df):
     print("The most popular end station is: ",popular_end)
 
     # TO DO: display most frequent combination of start station and end station trip
-    df['start_end_stations'] = df['Start Station'] + " - " + df['End Station']
+    df['start_end_stations'] = df['Start Station'] + "-to-" + df['End Station']
     popular_start_end = df['start_end_stations'].mode()[0]
     print("The most popular starting and ending stations are: ",popular_start_end)
 
@@ -145,7 +145,7 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    print("The total travel time in hours is: ", round(total_travel_time/3600,2))
+    print("The total travel time in days is: ", round(total_travel_time/86400,2))
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
